@@ -1,0 +1,50 @@
+extends layout
+
+block content
+  form#form.container
+    .row
+      h1 Bé tập tính
+    br
+    .row.mb-2
+      .col-3 Số thứ nhất
+      .col-5
+        input#num1(type='number' step='any' name='num1' value= num1)
+      .col-2
+        label(for='add') Cộng
+        input#add(type='radio' name='op' value='add')
+      .col-2
+        label(for='sub') Trừ
+        input#sub(type='radio' name='op' value='sub')
+    .row.mb-2
+      .col-3 Số thứ hai
+      .col-5
+        input#num2(type='number' step='any' name='num2' value= num2)
+      .col-2
+        label(for='mul') Nhân
+        input#mul(type='radio' name='op' value='mul')
+      .col-2
+        label(for='div') Chia
+        input#div(type='radio' name='op' value='div')
+    .row.mb-2
+      .col-3 Kết quả
+      .col-5
+        textarea#res(disabled='' placeholder= response)
+      .col-2
+        input(type='submit' value='Tính')
+    .row
+      .col-3 Thông báo
+      .col-9
+        #error1.row(style='display:none;')
+          | Giá trị nhập ở ô 
+          i Số thứ nhất
+          |  không phải là
+          |                     số
+        #error2.row(style='display:none;')
+          | Giá trị nhập ở ô 
+          i Số thứ hai
+          |  không phải là
+          |                     số
+        #error3.row(style='display:none') Chưa chọn phép tính
+        #error4.row(style='display:none') Chưa nhập đầy đủ giá trị
+  script(src='./javascripts/script.js')
+

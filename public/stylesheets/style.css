@@ -1,0 +1,29 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+#error1,
+#error2,
+#error3,
+#error4 {
+  color: red;
+}
+
+textarea {
+  resize: none !important;
+  width: 100%;
+  background-color: white;
+}
+
+input {
+  outline: none;
+}
+
+i {
+  padding: 0 !important;
+}
